@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
+import Main from './components/Main';
 import {useState, useEffect} from 'react'
 
 
@@ -14,6 +15,7 @@ function App() {
       <Header/>
       <div className='content-wrap'>
           <Sidebar topAnime={topAnime}/>
+          <Main/>
       </div>
     </div>
   );

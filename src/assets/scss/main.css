@@ -50,4 +50,45 @@ header h1 strong {
 .content-wrap aside nav a:hover {
   background-color: #313131;
   color: #AAA;
+}
+.content-wrap main {
+  flex: 1 1 0%;
+  padding: 0px 16px;
+}
+.content-wrap main .main-head {
+  display: flex;
+  justify-content: flex-end;
+}
+.content-wrap main .main-head .search-bar {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 1 0%;
+}
+.content-wrap main .main-head .search-bar input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
+  border-radius: 999px;
+  background-color: #EEE;
+  transition: 0.4s;
+}
+.content-wrap main .main-head .search-bar input ::-moz-placeholder {
+  color: #888;
+}
+.content-wrap main .main-head .search-bar input :-ms-input-placeholder {
+  color: #888;
+}
+.content-wrap main .main-head .search-bar input ::placeholder {
+  color: #888;
+}
+.content-wrap main .main-head .search-bar input:focus, .content-wrap main .main-head .search-bar input:valid {
+  background-color: #313131;
+  color: #FFF;
 }/*# sourceMappingURL=main.css.map */
