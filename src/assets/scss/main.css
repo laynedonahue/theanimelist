@@ -16,4 +16,38 @@ header h1 {
 }
 header h1 strong {
   color: black;
+}
+
+.content-wrap {
+  display: flex;
+}
+.content-wrap aside {
+  flex: 1 1 250px;
+  max-width: 250px;
+  padding-right: 16px;
+}
+.content-wrap aside nav {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.content-wrap aside nav h3 {
+  color: #313131;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.content-wrap aside nav a {
+  display: block;
+  padding: 8px 16px;
+  text-align: left;
+  color: #888;
+  font-size: 16px;
+  margin-bottom: 16px;
+  background-color: #EEE;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.content-wrap aside nav a:hover {
+  background-color: #313131;
+  color: #AAA;
 }/*# sourceMappingURL=main.css.map */
