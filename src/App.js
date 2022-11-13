@@ -11,10 +11,10 @@ function App() {
   const [search, setSearch] = useState('');
 
   const getTopAnime = async () => {
-    const temp = await fetch(`https://api.jikan.moe/v4/top/anime/`)
+    const temp = await fetch(`https://api.jikan.moe/v4/top/anime?type=bypopularity&page=1&limit=5`)
     .then(res => res.json());
 
-    setTopAnime(temp.data.slice(0,5));
+    setTopAnime(temp);
   }
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function App() {
   }, [])
 
   console.log(topAnime);
-  console.log(getTopAnime)
+
   return (
     <div className="App">
       <Header/>
