@@ -13,8 +13,9 @@ function App() {
   const getTopAnime = async () => {
     const temp = await fetch(`https://api.jikan.moe/v4/top/anime?type=bypopularity&page=1&limit=5`)
     .then(res => res.json());
-
-    setTopAnime(temp);
+    console.log(temp)
+    setTopAnime(temp.data.slice(0, 5));
+    console.log(temp)
   }
 
   useEffect(() => {
