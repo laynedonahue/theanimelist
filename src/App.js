@@ -13,23 +13,37 @@ function App() {
   const getTopAnime = async () => {
     const temp = await fetch(`https://api.jikan.moe/v4/top/anime?type=bypopularity&page=1&limit=5`)
     .then(res => res.json());
-    console.log(temp)
+
     setTopAnime(temp.data.slice(0, 5));
-    console.log(temp)
+  }
+
+  const handleSearch = e => {
+    e.preventDefault();
+    
+    
+
+    fetchAnime(search);
+  }
+
+  const fetchAnime = async (query) => {
+    
   }
 
   useEffect(() => {
     getTopAnime();
   }, [])
 
-  console.log(topAnime);
 
   return (
     <div className="App">
       <Header/>
       <div className='content-wrap'>
           <Sidebar topAnime={topAnime}/>
-          <Main/>
+          <Main 
+          handleSearch={handleSearch}
+          search={search}
+          setSearch={setSearch}
+          animeList={animeList}/>
       </div>
     </div>
   );

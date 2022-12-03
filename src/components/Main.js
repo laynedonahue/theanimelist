@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Main = () => {
+const Main = (props) => {
   return (
     <main>
       <div className='main-head'>
-        <form className='search-bar'>
-            <input type='search' placeholder='Enter an Anime' required></input>
+        <form className='search-bar'
+        onSubmit={props.handleSearch}>
+            <input type='search' placeholder='Enter an Anime' required value={props.search} onChange={e => props.setSearch(e.target.value)}></input>
         </form>
 
 
